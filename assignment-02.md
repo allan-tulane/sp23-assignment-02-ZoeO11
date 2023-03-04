@@ -13,54 +13,55 @@ and push to your github repository.
 1. Derive asymptotic upper bounds of work for each recurrence below.
   * $W(n)=2W(n/3)+1$
 .  
-.  
+.  O(2^log3(n))
 .  
 .  
 .  
   * $W(n)=5W(n/4)+n$
 .  
-.  
+    O(5^log4(n))
 .  
 .  
 .  
   * $W(n)=7W(n/7)+n$
 .  
 .  
-.  
+.  O(nlogn)
 .  
 .  
   * $W(n)=9W(n/3)+n^2$
 .  
 .  
-.  
+.  0(n^2(log3(n)))
 .  
 .  
   * $W(n)=8W(n/2)+n^3$
 .  
 .  
-.  
+.  0(n^3(log2(n)))
 .  
 .  
   * $W(n)=49W(n/25)+n^{3/2}\log n$
 .  
-.  
+.  O((n^1.50)*log(25n))
 .  
 .  
 .  
   * $W(n)=W(n-1)+2$
 .  
 .  
-.  
+.  0(n)
 .  
 .  
   * $W(n)= W(n-1)+n^c$, with $c\geq 1$
 .  
 .  
-.  
+  0(n^(c+1))
 .  
 .  
   * $W(n)=W(\sqrt{n})+1$
 
+    log(log(n))
 
 2. Suppose that for a given task you are choosing between the following three algorithms:
 
@@ -80,6 +81,12 @@ and push to your github repository.
     What are the asymptotic running times of each of these algorithms?
     Which algorithm would you choose?
 
+  A = 5W(n/2) + n = 5^log(n) = O(n^(log(5)))
+  B = 2W(n-1) + 1 = 0(n^2)
+  C = 9W(n/3) + n^2 = 0(n^2(log3(n)))
+
+  I choose algorithim B because its runtime is 0(n^2) which is the best runtime of the 3 algorithims.
+  
 
 3. Now that you have some practice solving recurrences, let's work on
   implementing some algorithms. In lecture we discussed a divide and
